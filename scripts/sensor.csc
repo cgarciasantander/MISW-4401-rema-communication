@@ -43,4 +43,4 @@ end
 
 data mens "count" id count
 send mens
-delay 1000
+delay 500

@@ -1,0 +1,18 @@
+# CupCarbon temporary files
+tmp/
+
+# Simulation logs
+logs/
+
+# Simulation results (regenerated on each run)
+results/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.idea/
+.vscode/
+*.swp
+*.swo

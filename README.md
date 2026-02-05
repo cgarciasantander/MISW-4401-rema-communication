@@ -9,12 +9,11 @@ Simulation of a wireless sensor network (WSN) using [CupCarbon](https://cupcarbo
 | Component | Count | IDs | Script |
 |-----------|-------|-----|--------|
 | Base Station | 1 | 93 | `base.csc` |
-| Sensor Nodes | 20 | 146 - 165 | `sensor.csc` |
+| Sensor Nodes | 20 | 1 - 20 | `sensor.csc` |
 
-- **Protocol:** ZIGBEE (IEEE 802.15.4)
 - **Network ID:** 13108
-- **Radio Radius:** 100 m
-- **Data Rate:** 250,000 bps
+- **Radio 1:** ZIGBEE (IEEE 802.15.4) - Radius: 100 m, Data Rate: 250,000 bps
+- **Radio 2:** LoRa - Radius: 5,000 m, Spreading Factor: 7, Data Rate: 250,000 bps
 
 ## How It Works
 
@@ -44,10 +43,10 @@ cdc/
 │   ├── simulationParams.cfg      # Simulation parameters
 │   ├── nodes/                    # Node configuration (position, type, script)
 │   │   ├── basestation_93
-│   │   └── sensor_146 .. sensor_165
+│   │   └── sensor_1 .. sensor_20
 │   └── sensor_radios/            # Radio module configuration per node
 │       ├── basestation_93
-│       └── sensor_146 .. sensor_165
+│       └── sensor_1 .. sensor_20
 ├── results/
 │   └── wisen_simulation.csv      # Simulation output (battery levels over time)
 ├── logs/                         # Simulation logs
@@ -87,7 +86,7 @@ The simulation outputs a CSV file (`results/wisen_simulation.csv`) with columns:
 
 - **Time (Sec)** - Simulation timestamp
 - **S93** - Base station energy
-- **S146 - S165** - Battery level (%) for each sensor node
+- **S1 - S20** - Battery level (%) for each sensor node
 
 ## Authors
 

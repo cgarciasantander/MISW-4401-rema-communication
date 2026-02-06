@@ -9,37 +9,42 @@ getpos2 lonSen latSen
 
 loop
 wait 100
-read mens
-rdata mens tipo valor
+read incoming
+rdata incoming tipo valor1 valor2 valor3
 
 if((tipo=="hola") && (ant == 999))
-   set ant valor
-   data mens tipo id
-   send mens * valor
+	set ant valor1
+	cprint "Registered in the network:" ant
+	data mens tipo id
+	cprint "Forwarding ant:" tipo id
+	send mens * valor1
 end
 
-if(tipo=="alerta")
-   send mens ant
-end
-
-if (tipo=="stop")
-	data mens "stop"
-	send mens * valor
-	cprint "Para sensor: " id
+if(tipo=="stop")
+	cprint "Stop signal received"
 	wait 1000
 	stop
 end
 
-battery bat
-if(bat<5)
-	data mens "critico" lonSen latSen
+if((tipo=="orden") && (ant<999))
+	cprint "Order forwarded from:" valor1 "to:" ant
+	data mens tipo valor1 valor2 valor3
 	send mens ant
+	wait 100
 end
 
 inc count
-if (count >= maxCount)
+if(count >= maxCount)
 	stop
 end
+
+battery bat
+int batLevel bat
+if(batLevel<15)
+	data mens "critico" id lonSen latSen
+	send mens ant
+end
+
 
 randb menuIdx 1 10
 if(menuIdx == 1)

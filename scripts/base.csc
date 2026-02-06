@@ -1,6 +1,6 @@
 atget id id
 
-data p "hola" id id
+data p "hola" id
 send p
 
 loop
@@ -11,16 +11,10 @@ if(tipo == "orden")
 	printfile tipo valor1 valor2 valor3
 end
 
-if(tipo == "alerta")
-   cprint "Alerta en: longitud" valor1 ", latitud: " valor2
-end
-
 if(tipo == "critico")
-	cprint "Nodo descargado en: longitud" valor1 ", latitud: " valor2
-	data p "stop"	
-	send p
-	wait 1000
-	stop
+	cprint "Nodo descargado en device:" valor1 ", longitud:" valor2 ", latitud: " valor3
+	data p "stop"
+	send p valor1
 end
 
 wait 100

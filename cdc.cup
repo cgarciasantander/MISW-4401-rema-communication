@@ -2,13 +2,13 @@ CupCarbon v. Klines 7.2
 ----------------
 name:cdc
 zoom:0
-centerposition_la:4.603257259391724
-centerposition_lo:-74.06794264912605
+centerposition_la:4.603281321404862
+centerposition_lo:-74.0678970515728
 map:0
 display_details:true
 draw_radio_links:true
-draw_sensor_arrows:false
-radio_links_color:3
+draw_sensor_arrows:true
+radio_links_color:5
 draw_marker_arrows:false
 display_rl_distance:false
 propagation:true

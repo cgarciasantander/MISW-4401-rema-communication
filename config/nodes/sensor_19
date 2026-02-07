@@ -2,11 +2,11 @@ List of parameters
 ------------------------------------------
 device_type:1
 device_id:19
-device_longitude:-74.0669073064472
-device_latitude:4.602499092788188
+device_longitude:-74.06695022179144
+device_latitude:4.60271297754666
 device_elevation:0.0
 device_radius:0.0
-device_hide:0
+device_hide:4
 device_pic:0
 device_draw_battery:true
 device_sensor_unit_radius:20.0

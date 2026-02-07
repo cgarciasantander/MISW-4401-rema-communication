@@ -6,7 +6,7 @@ device_longitude:-74.06792521476746
 device_latitude:4.6032331973866905
 device_elevation:0.0
 device_radius:0.0
-device_hide:0
+device_hide:4
 device_draw_battery:false
 device_sensor_unit_radius:20.0
 device_script_file_name:base.csc

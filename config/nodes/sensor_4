@@ -6,7 +6,7 @@ device_longitude:-74.068348640991
 device_latitude:4.603158523375312
 device_elevation:0.0
 device_radius:0.0
-device_hide:0
+device_hide:4
 device_pic:0
 device_draw_battery:true
 device_sensor_unit_radius:20.0
